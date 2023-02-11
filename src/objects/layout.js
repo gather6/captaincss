@@ -71,7 +71,7 @@ module.exports = function ({
   if (pluginDisabled('layout', config)) return;
 
   // Disabling this for now as we haven't solved how to get two 50% containers without wrapping when they have a gap applied
-  const supportFlexGap = false; // config('captain.support.flexGap') || false;
+  const supportFlexGap = config('captain.support.flexGap') || false;
 
   let gap = theme('layout.gap');
   if (_.isString(gap)) {
